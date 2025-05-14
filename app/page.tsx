@@ -141,10 +141,10 @@ const TrainerCard = ({ name, specialty, image }) => {
     >
       <div className="aspect-[3/4] overflow-hidden rounded-xl relative">
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
-        <img
-          src={image || "/placeholder.svg"}
+<img
+          src={image || "/placeholder-user.jpg"}
           alt={name}
-          className="w-full h-full object-cover transition-transform duration-500"
+          className="w-48 h-64 object-cover object-center transition-transform duration-500"
           style={{
             transform: isHovered ? "scale(1.05)" : "scale(1)",
           }}
@@ -603,21 +603,23 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
+              className="mt-4"
             >
-              <TrainerCard
+                <TrainerCard
                 name="Alex Morgan"
                 specialty="Strength & Conditioning"
-                image="/placeholder.svg?height=400&width=300"
+                image="/Cbum.jpeg"
+                imageClassName="object-cover object-center"
               />
             </motion.div>
 
-            <motion.div
+<motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <TrainerCard name="Sarah Chen" specialty="HIIT & Cardio" image="/placeholder.svg?height=400&width=300" />
+              <TrainerCard name="Sarah Chen" specialty="HIIT & Cardio" image="/Chris Bumstead.jpeg" imageClassName="object-cover object-center" />
             </motion.div>
 
             <motion.div
@@ -625,11 +627,13 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
+              className="mt-4"
             >
-              <TrainerCard
+                <TrainerCard
                 name="Marcus Johnson"
                 specialty="Bodybuilding"
-                image="/placeholder.svg?height=400&width=300"
+                image="/download.jpeg"
+                imageClassName="object-cover object-center"
               />
             </motion.div>
 
@@ -639,10 +643,11 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <TrainerCard
+                <TrainerCard
                 name="Emma Rodriguez"
                 specialty="Yoga & Flexibility"
-                image="/placeholder.svg?height=400&width=300"
+                image="/Workout Motivation _ Workout Fitness _ Bodybuilding Fitness.jpeg"
+                imageClassName="object-cover object-center"
               />
             </motion.div>
           </div>
@@ -879,39 +884,39 @@ export default function Home() {
 
           <Carousel className="max-w-5xl mx-auto">
             <CarouselContent>
-              <CarouselItem className="md:basis-1/2 lg:basis-1/3 p-2">
+            <CarouselItem className="md:basis-1/2 lg:basis-1/3 p-2">
                 <TestimonialCard
                   name="Michael T."
                   text="I've tried many gyms before, but NEXUS is on another level. The trainers are exceptional and the atmosphere pushes you to achieve more than you thought possible."
-                  image="/placeholder.svg?height=100&width=100"
+                  image="/placeholder-user.jpg"
                 />
               </CarouselItem>
               <CarouselItem className="md:basis-1/2 lg:basis-1/3 p-2">
                 <TestimonialCard
                   name="Jennifer K."
                   text="The personalized approach at NEXUS has completely changed my fitness journey. I've lost 30 pounds and gained confidence I never thought I'd have."
-                  image="/placeholder.svg?height=100&width=100"
+                  image="/placeholder-user.jpg"
                 />
               </CarouselItem>
               <CarouselItem className="md:basis-1/2 lg:basis-1/3 p-2">
                 <TestimonialCard
                   name="David L."
                   text="As a busy professional, the 24/7 access and efficient workouts have been game-changing. The trainers know exactly how to maximize my limited time."
-                  image="/placeholder.svg?height=100&width=100"
+                  image="/placeholder-user.jpg"
                 />
               </CarouselItem>
               <CarouselItem className="md:basis-1/2 lg:basis-1/3 p-2">
                 <TestimonialCard
                   name="Sophia R."
                   text="The community aspect of NEXUS keeps me coming back. It's not just a gym, it's a supportive family that celebrates every victory together."
-                  image="/placeholder.svg?height=100&width=100"
+                  image="/placeholder-user.jpg"
                 />
               </CarouselItem>
               <CarouselItem className="md:basis-1/2 lg:basis-1/3 p-2">
                 <TestimonialCard
                   name="James W."
                   text="The technology integration at NEXUS is incredible. Being able to track my progress in real-time has been a huge motivator in reaching my goals."
-                  image="/placeholder.svg?height=100&width=100"
+                  image="/placeholder-user.jpg"
                 />
               </CarouselItem>
             </CarouselContent>
